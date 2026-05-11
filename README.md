@@ -239,7 +239,7 @@ Both metrics are computed on the chronological test set to simulate a realistic 
 
 ---
 
-## What I learned
+## About key topics
 
 - Implementing Neural CF from scratch in PyTorch including custom Dataset with negative sampling
 - The importance of chronological splitting for recommendation systems
@@ -256,7 +256,3 @@ Both metrics are computed on the chronological test set to simulate a realistic 
 - Harper, F. M., & Konstan, J. A. (2015). [The MovieLens Datasets](https://dl.acm.org/doi/10.1145/2827872). ACM TIIS.
 
 ---
-
-## License
-
-MIT
