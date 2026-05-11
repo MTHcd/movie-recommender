@@ -1,0 +1,39 @@
+﻿project:
+  name: movie-recommender
+  seed: 42
+  device: auto
+
+paths:
+  data_raw: data/raw
+  data_processed: data/processed
+  mlruns: mlruns
+
+data:
+  movielens_small_url: "https://files.grouplens.org/datasets/movielens/ml-latest-small.zip"
+  min_ratings_user: 20
+  min_ratings_item: 10
+  train_ratio: 0.8
+  val_ratio: 0.1
+  test_ratio: 0.1
+
+neural_cf:
+  embedding_dim: 64
+  mlp_layers: [256, 128, 64]
+  dropout: 0.3
+  learning_rate: 0.001
+  batch_size: 512
+  epochs: 30
+  weight_decay: 1.0e-5
+  early_stopping_patience: 5
+
+evaluation:
+  top_k: [5, 10, 20]
+
+mlflow:
+  experiment_name: movie-recommender
+  tracking_uri: mlruns
+
+api:
+  host: 0.0.0.0
+  port: 8000
+  n_recommendations_default: 10
